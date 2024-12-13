@@ -1,0 +1,32 @@
+body {
+    background-color: #cefdf7;
+   }
+
+h1  {
+    color: DarkCyan;
+    }
+
+a  {
+   background-color: hsl(198, 100%, 44%);
+   color: White;
+    display: block;
+    text-decoration: none;
+    padding: 0px 10px;
+    width: 150px;
+    border-radius: 5px;
+   }
+
+.button {
+        background-color: DarkGreen;
+        color: White;
+       border-radius: 5px;
+       width: 93px;
+       text-align: center;
+     }
+
+.exit-button {
+        background-color: red;
+       border-radius: 5px;
+       width: 120px;
+       text-align: center;
+     }

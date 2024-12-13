@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'css-task/styles.css' %}">
+    <title>{% if task.pk %} Update Task {% else %} Create Task {% endif %}</title>
+</head>
+<body>
+<h1>{% if task.pk %} Update Task {% else %} Create Task {% endif %}</h1>
+<form method="post">
+    {% csrf_token %}
+    <label for="task_title">Task Title</label><br>
+    <input type="text" id="task_title" name="task_title" {% if task.pk %} value="{{ task.task_title }}" {% endif %}><br><br>
+    <label for="description">Description</label><br>
+    <textarea name="description" id="description" cols="30" rows="3">{% if task.pk %} {{ task.description }} {% endif %}</textarea><br><br>
+    <label for="due_date">Due Date</label><br>
+    <input type="date" id="due_date" name="due_date"><br><br>
+    <button type="submit" class="button">{% if task.pk %} Update Task {% else %}Create Task {% endif %}</button>
+</form>
+<a href="{% url 'tasks:list' %}"><h3 class="exit-button">{% if task.pk %} Back to Detail {% else %} Back to Task List {% endif %}</h3></a>
+</body>
+</html>

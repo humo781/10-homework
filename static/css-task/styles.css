@@ -1,0 +1,26 @@
+body {
+       background-color: LightCyan;
+    }
+h1 {
+    color: DarkBlue;
+   }
+
+.exit-button {
+    color: White;
+    background-color: FireBrick;
+    text-decoration: none;
+    border-radius: 5px;
+    width: 150px;
+    }
+
+.data {
+    color: DeepSkyBlue;
+    text-decoration: none;
+    }
+
+.button {
+    color: White;
+    background-color: LightGreen;
+    text-decoration: none;
+    border-radius: 5px;
+    }

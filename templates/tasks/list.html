@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'css-task/styles.css' %}">
+    <title>Tasks List</title>
+</head>
+<body>
+<h1>Tasks List</h1>
+<a href="{% url 'tasks:create' %}" class="button"><b>Create Tasks</b></a>
+{% for task in tasks %}
+    <a href="{{ task.get_detail_url }}" class="data"><h3>Task {{ forloop.counter }}: {{ task.task_title }}</h3></a>
+{% empty %}
+    <h1>No Notes yet!</h1>
+{% endfor %}
+<a href="{% url 'home' %}" class="exit-button">Back to Home</a>
+</body>
+</html>
